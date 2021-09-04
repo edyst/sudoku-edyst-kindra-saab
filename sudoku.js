@@ -1,4 +1,5 @@
 //Jai Mata Di
+
 const Easy=[4,6,9,0,0,0,8,0,2,
             7,2,0,3,0,0,0,0,6,
             0,0,0,2,6,8,9,7,4,
@@ -51,6 +52,16 @@ const Hard=  [4,0,0,8,0,0,0,0,7,
             function makeSudokuEasy()
             {
 
+                for(let i=0;i<81;i++)
+                {
+
+                    
+                    document.querySelector(`.td${i+1} input`).classList.remove("green-back");
+
+
+                }
+
+
 
                 for(let i=0;i<81;i++)
     {
@@ -89,6 +100,16 @@ const Hard=  [4,0,0,8,0,0,0,0,7,
             {
 
                 for(let i=0;i<81;i++)
+                {
+
+                    
+                    document.querySelector(`.td${i+1} input`).classList.remove("green-back");
+
+
+                }
+
+
+                for(let i=0;i<81;i++)
     {
         document.querySelector(`.td${i+1} input`).classList.remove("red");
         
@@ -124,6 +145,17 @@ const Hard=  [4,0,0,8,0,0,0,0,7,
 
             function makeSudokuHard()
             {
+
+                for(let i=0;i<81;i++)
+                {
+
+                    
+                    document.querySelector(`.td${i+1} input`).classList.remove("green-back");
+
+
+                }
+
+
 
                 for(let i=0;i<81;i++)
     {
@@ -722,9 +754,22 @@ function validateSudoku()
     console.log("count is " + count);
 
     
+    
     if(sudokuIsOkay===true && count===81)
     {
-        alert("Yes, You Nailed It 👏😎");
+        for(let i=0;i<81;i++)
+                {
+
+                    
+                    document.querySelector(`.td${i+1} input`).classList.add("green-back");
+
+
+                }
+  
+                setTimeout(function(){ alert("Yes, You Nailed It 👏😎"); }, 1000);
+        // alert("Yes, You Nailed It 👏😎");
+
+        
     }
 
     
@@ -743,6 +788,24 @@ function validateSudoku()
 // document.querySelector('.inputcls').addEventListener('click', changeClass);
 
 document.getElementById('validate').addEventListener('click', validateSudoku);
+
+
+function reloadPage()
+{
+    location.reload();
+}
+
+document.querySelector('#reload').addEventListener('click',reloadPage);
+
+
+function changeMode()
+{
+    document.querySelector('body').classList.toggle('colourChange');
+    document.querySelector('.mode').classList.toggle('colourWhite');
+}
+
+document.querySelector('.mode').addEventListener('click',changeMode);
+
 
 
 
