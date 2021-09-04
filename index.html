@@ -1,4 +1,5 @@
 <!-- Jai Mata Di. -->
+<!-- Jai Mata Di. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
     <link rel="stylesheet" href="styles.css">
      
     <title>Document</title>
@@ -15,6 +21,11 @@
 <body>
 
     <h1 class="heading">Sudoku Solver 👩‍💻</h1>
+    <div>
+        <button class="mode">
+            <i class="fa fa-adjust"></i>
+        </button>
+    </div>
 
     <div class="buttons">
         <button class="pushable easy">
@@ -153,7 +164,20 @@
     </div>
 
 
+    <div style="text-align: center; margin-top: 25px;">
+        <button class="pushable" id="reload" >
+            <span class="front">
+                Restart Game !!
+            </span>
+        </button>
+    </div>
+
+
     <script src="sudoku.js"></script>
+
+    <div  class="info">
+        <span style="text-align:center;color: gray; font-size: large;">Made with 💖 by <a style="text-decoration: none; color: inherit; font-weight: bold;" href="https://www.linkedin.com/in/jatin-kindra-5b3054193/"> Kindra-Saab</a>  😎</span>
+    </div>
 
     
 </body>
