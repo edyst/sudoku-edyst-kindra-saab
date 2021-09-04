@@ -1,13 +1,13 @@
 
-const Easy=[0,9,0,0,5,3,7,0,6,
-            6,7,0,1,9,0,0,5,0,
-            5,0,4,0,0,2,0,0,1,
-            4,0,0,6,0,0,2,3,0,
-            3,1,0,0,0,9,0,6,5,
-            0,0,0,5,3,0,0,8,7,
-            0,0,0,0,2,5,9,0,0,
-            0,0,1,9,0,0,5,0,3,
-            0,5,3,8,0,0,0,7,0]
+const Easy=[4,6,9,0,0,0,8,0,2,
+            7,2,0,3,0,0,0,0,6,
+            0,0,0,2,6,8,9,7,4,
+            5,4,0,8,3,0,0,0,7,
+            8,7,6,0,5,0,0,0,9,
+            9,0,0,0,0,6,1,5,0,
+            6,0,0,0,0,0,2,9,0,
+            0,0,7,0,0,5,4,0,0,
+            0,8,3,0,0,1,0,0,0]
 
 const Medium=[9,0,0,0,0,8,5,0,0,
               0,0,5,0,0,4,0,0,0,
@@ -187,7 +187,7 @@ function validateRow(rowNum)
 {
     
     
-    
+    sudokuIsOkay=true;
     
     // let j=0;
     let start=(rowNum-1)*9 +1;
@@ -233,7 +233,7 @@ function validateRow(rowNum)
 function validateColumn(colNum)
 {
     
-    
+    sudokuIsOkay=true;
     
     
     // let j=0;
@@ -278,6 +278,8 @@ function validateColumn(colNum)
 
 function validateGrid(gridNum)
 {
+    
+
     let gridArray=[[],[],[],[],[],[],[],[],[]];
     let num=0;
     let times=3;
@@ -299,7 +301,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -309,9 +311,9 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
+                    sudokuIsOkay=false;
 
                     }
-                    sudokuIsOkay=false;
 
                 }
             }
@@ -319,7 +321,7 @@ function validateGrid(gridNum)
     }
 
 
-
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===2)
     {
         let start=4;
@@ -338,7 +340,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -348,16 +350,16 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
+                    sudokuIsOkay=false;
 
                     }
-                    sudokuIsOkay=false;
 
                 }
             }
         }
     }
 
-
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===3)
     {
         let start=7;
@@ -376,7 +378,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -386,15 +388,16 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
+                    sudokuIsOkay=false;
 
                     }
-                    sudokuIsOkay=false;
 
                 }
             }
         }
     }
 
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===4)
     {
         let start=28;
@@ -413,7 +416,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -423,16 +426,16 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
+                    sudokuIsOkay=false;
 
                     }
-                    sudokuIsOkay=false;
 
                 }
             }
         }
     }
 
-
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===5)
     {
         let start=31;
@@ -451,7 +454,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -461,9 +464,9 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
+                    sudokuIsOkay=false;
 
                     }
-                    sudokuIsOkay=false;
 
                 }
             }
@@ -471,7 +474,7 @@ function validateGrid(gridNum)
     }
 
 
-
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===6)
     {
         let start=34;
@@ -490,7 +493,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -500,9 +503,9 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
+                    sudokuIsOkay=false;
 
                     }
-                    sudokuIsOkay=false;
 
                 }
             }
@@ -510,6 +513,7 @@ function validateGrid(gridNum)
     }
 
 
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===7)
     {
         let start=55;
@@ -528,7 +532,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -538,16 +542,16 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
-
-                    }
                     sudokuIsOkay=false;
+                    }
+                    
 
                 }
             }
         }
     }
 
-
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===8)
     {
         let start=58;
@@ -566,7 +570,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -576,16 +580,16 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
-
-                    }
                     sudokuIsOkay=false;
+                    }
+                    
 
                 }
             }
         }
     }
 
-
+    gridArray=[[],[],[],[],[],[],[],[],[]];
     if(gridNum===9)
     {
         let start=61;
@@ -604,7 +608,7 @@ function validateGrid(gridNum)
             starting=start
         }
 
-        for(let i=0;i<0;i++)
+        for(let i=0;i<9;i++)
         {
             for(let j=0;j<9;j++)
             {
@@ -614,9 +618,9 @@ function validateGrid(gridNum)
                     {
                     document.querySelector(`.td${gridArray[i][1]}  input`).classList.add("red");
                     document.querySelector(`.td${gridArray[j][1]}  input`).classList.add("red");
-
-                    }
                     sudokuIsOkay=false;
+                    }
+                    
 
                 }
             }
@@ -682,6 +686,7 @@ function validateSudoku()
         
     // }
 
+    sudokuIsOkay=true;
 
    
 
@@ -700,18 +705,21 @@ function validateSudoku()
     validateRows();
     validateColumns();
     validateGrids();
+    console.log(sudokuIsOkay);
 
 
     let count=0;
     for(let i=0;i<81;i++)
     {
-       if(document.querySelector(`.td${i+1} input`).value !== "" || document.querySelector(`.td${i+1} input`).value !== " " || document.querySelector(`.td${i+1} input`).value !== null)
+       if(document.querySelector(`.td${i+1} input`).value !== "")
        {
             // finalAns=true;
             count++;
             
        }
     }
+
+    console.log("count is " + count);
 
     
     if(sudokuIsOkay===true && count===81)
@@ -735,8 +743,6 @@ function validateSudoku()
 // document.querySelector('.inputcls').addEventListener('click', changeClass);
 
 document.getElementById('validate').addEventListener('click', validateSudoku);
-
-
 
 
 
