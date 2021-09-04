@@ -1,3 +1,5 @@
+/* Jai Mata Di */
+
 
 .heading{
     text-align: center;
@@ -5,6 +7,7 @@
     color: gray;
     text-shadow: 1px 0 black;
     font-family: 'Balsamiq Sans', cursive;
+    margin-bottom: 5px;
 }
 
 table{
@@ -70,6 +73,26 @@ table{
     border: 5px solid #344861;
 }
 
+.green-border{
+
+    border: 5px solid #126901;
+
+}
+
+.green-td{
+    border:1px solid #32e010;
+}
+
+.green-right-dark{
+    border:1px solid #32e010;
+    
+}
+
+.green-bottom-dark{
+    border:1px solid #32e010;
+
+}
+
 
 td{
     border: 1px solid #bec6d4;
@@ -92,7 +115,7 @@ td{
     gap: 5%;
     flex-wrap: wrap;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 
@@ -139,3 +162,63 @@ td{
   .redBorder{
     border: 3px solid red;
   }
+
+.colourChange{
+    background-color: black;
+}
+
+.mode{
+
+    font-size: 50px; 
+    color: black; 
+    margin-left: 85%;
+    background-color: gray; 
+    border-radius: 20%;
+     border: none;
+     cursor: grab;
+}
+
+@media (max-width:900px)
+{
+    .mode{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:500px)
+{
+    .mode{
+        font-size: 30px;
+    }
+
+    .buttons{
+        margin-top:25px;
+    }
+}
+
+@media (max-width:730px)
+{
+    .heading{
+        margin-bottom: 20px;
+    }
+}
+
+.colourWhite{
+    color: white;
+}
+
+.green-back{
+    background-color: #79ed61;
+}
+
+.info{
+   text-align: right;
+   margin-top: 30px;
+}
+
+@media (max-width:500px) {
+    
+    .info{
+        text-align: center;
+    }
+}
